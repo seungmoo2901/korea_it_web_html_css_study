@@ -183,7 +183,6 @@
 
       #dates-box {
         width: 768px;
-        height: 120px;
         background-color: white;
         padding: 0;
       }
@@ -192,11 +191,11 @@
         width: 100%;
         height: 40px;
         padding: 8px 16px;
-        font-size: 15px;
         color: #757575;
         list-style-type: none;
         line-height: 24px;
         box-sizing: border-box;
+        font-size: 15px;
       }
 
       .dates-item:nth-child(1),
@@ -207,11 +206,11 @@
 
       .dates-item:nth-child(1) > span,
       .dates-item:nth-child(2) > span {
-        margin-left: 8px;
+        margin-left: 5px;
         background-color: orangered;
         color: white;
         font-size: 14px;
-        padding: 3px 4px;
+        padding: 3px 9px;
       }
 
       .dates-item:nth-child(3) > span {
@@ -222,7 +221,6 @@
         border-radius: 50px;
         padding-right: 8px;
         padding-left: 8px;
-        text-align: center;
       }
 
       .dates-item:nth-child(3) {
@@ -245,7 +243,7 @@
 
       .card-img-box {
         width: 100%;
-        height: 183px;
+        height: 180px;
       }
 
       .card-text-box {
@@ -255,17 +253,19 @@
 
       .card-img-box > img {
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
-      /* contain: 가로 세로 비율 맞게 들어가는 대신
+      /* 
+      contain : 가로 세로 비율 맞게 들어가는 대신
       여백이 생김
-      cover : 가로 세로 비율 맞게 들어가는데 
-      여백을 확대해서 채움
-      fill: 지정된 가로 세로 크기대로 들어감 대신
-      비율 다 깨짐  */
+      cover : 가로 세로 비율 맞게 들어가는데 여백을
+      확대해서 채움
+      fill : 지정된 가로 세로 크기대로 들어가요 대신
+      비율 다 깨져서 들어감
+       */
 
       .card-text-box {
-        padding: 13px 16px;
+        padding: 14px 16px;
         box-sizing: border-box;
       }
 
@@ -285,13 +285,14 @@
 
       .card-text-box > button {
         padding: 8px 16px;
+        border: none;
         background-color: black;
         color: white;
-        font-size: 13px;
+        font-size: 15px;
       }
 
       .card-text-box > button:hover {
-        background-color: gray;
+        background-color: lightgray;
         color: black;
       }
     </style>
