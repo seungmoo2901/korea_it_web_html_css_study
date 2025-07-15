@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        main{
+            width: 300px;
+            height: 400px;
+            background-color: tomato;
+            position: relative;
+            overflow: auto;
+        }
+
+        div{
+            width: 200px;
+            height: 100px;
+            border: 1px solid yellow;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        div:nth-of-type(2){
+            background-color: aqua;
+            opacity: 0.8;
+            /* position: relative;
+            원래 자기가 있던 위치 기준
+            top, bottom, left,right로 위치조절 */   
+            /* position: absolute;
+            원래 위치 기준이 아닌 상위 요소중 relative 기준
+            없으면 가장 상위 태그를 기준으로 삼는다 */
+            /* position: fixed;
+            뷰 포트 기준(브라우저의 전체화면) */
+            /* position: sticky; */
+            top: 28px;
+            left: 48px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>position: static;</div>
+      <div>position: absolute;</div>
+      <div>position: static;</div>
+      <div>position: static;</div>
+      <div>position: static;</div>
+      <div>position: static;</div>
+    </main>
+  </body>
+</html>
