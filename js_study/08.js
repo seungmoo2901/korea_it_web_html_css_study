@@ -127,6 +127,15 @@ console.log(expensiveProducts);
 
 const productNamesAndPrices = products.map((product) => ({
   name: product.name,
-  price: product.price
-}));   
+  price: product.price,
+}));
 console.log(productNamesAndPrices);
+
+const discountProducts = products
+  .filter((product) => product.category === "전자제품")
+  .map((product) => ({
+    name: product.name,
+    price: product.price,
+    price: Math.round(product.price * 0.9),
+  }));
+console.log(discountProducts);
