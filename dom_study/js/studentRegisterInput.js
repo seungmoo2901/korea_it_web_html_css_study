@@ -1,6 +1,6 @@
-function studentResgisterInput() {
+function studentResgisterInput({ type, name, onkeyup }) {
   return `
     <div>
-    <input type='${type}' name='${name}', onkeyup='${onkeyup}(event)'
+    <input type='${type}' name='${name}'autocomplete="off" onkeyup='${onkeyup}(event)'>
     </div>`;
 }

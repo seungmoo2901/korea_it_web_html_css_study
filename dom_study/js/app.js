@@ -16,5 +16,6 @@ function app() {
     <h2>작성일:${appInfo.date}</h2>
     <h3>작성자:${appInfo.author}</h3>
     ${studentResgister()}
+    <ul class="student-list"></ul>
   </div>`;
 }
