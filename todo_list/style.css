@@ -1,0 +1,84 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding-top: 50px;
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+}
+
+.container {
+  width: 500px;
+  padding: 30px 40px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  color: #4a90e2;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+/* em단위는 해당 요소의 부모의 font-size에 상대적으로 크기가 변함
+em 사용하면 폰트크기가 부모로부터 자깃으로 계속해서 상속 누적
+특정 구송요서 내에서만 크기를 비례적으로 조절하고 싶을때 유용 */
+/* rem 단위는 루트 즉 html태그의 font-sizr에 상대적
+rem은 항상 루트 요소의 폰트 크기를 기준으로 하므로, 중첩된 요소에서도 
+크기 계산이 훨씬 예측하기 쉽고 일관적
+웹페이지 전체의 기본 폰트 크기를 html에서 한 번만 변경하면
+rem으로 사용하는 모든 요소의 크기가 비례적으로 조정 */
+/* 
+em
+컴포넌트 내부의 요소 간 상대적인 크기, padding, margin
+ */
+/* 
+rem
+전역적인 폰트 크기, 주요 레이아웃 요소의 크기(width,height),padding,margin
+ */
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+#todoInput {
+  /* 남은공간 채우기 - flex-grow */
+  flex-grow: 1;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+#todoInput:focus {
+  border-color: #4a90e2;
+}
+
+#addTodoBtn {
+  padding: 12px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: backgroun-color 0.3s ease, transform 0.1s ease;
+}
+
+#addTodoBtn:hover {
+  background-color: #357bd8;
+  transform: translateY(-2px);
+}
+
+#addTodoBtn:active{
+    transform: translateY(0);
+}
+
+::placeholder {
+  color: #ddd;
+}
