@@ -13,7 +13,6 @@ body {
   padding: 30px 40px;
   background-color: white;
   border-radius: 5px;
-  text-align: center;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -21,6 +20,7 @@ h1 {
   color: #4a90e2;
   font-size: 2.2em;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 /* em단위는 해당 요소의 부모의 font-size에 상대적으로 크기가 변함
@@ -42,6 +42,7 @@ rem
 .input-area {
   display: flex;
   gap: 10px;
+  margin-bottom: 25px;
 }
 
 #todoInput {
@@ -75,10 +76,88 @@ rem
   transform: translateY(-2px);
 }
 
-#addTodoBtn:active{
-    transform: translateY(0);
+#addTodoBtn:active {
+  transform: translateY(0);
 }
 
 ::placeholder {
   color: #ddd;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todoList > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 12px 15px;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+   word-break: break-all;  
+   /* word-break: break-all : 줄을 바꿔 요소 너비 안에 맞게 표시되도록 하는 속성   */
+   /* keep-all: 단어 살리면서 줄 바꿈 */
+}
+
+.edit-input {
+  flex-grow: 1;
+  padding: 8px 10px;
+  outline: none;
+  border: 1px solid #4a90e2;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.todo-actions {
+  flex-shrink: 0;
+  /* 공간이 부족해도 이 요소는 줄어들지 않게 설정 */
+}
+
+.todo-actions > button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85em;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2 ease;
+}
+
+.edit-btn {
+  background-color: #ff9800;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+.edit-btn:hover {
+  background-color: #fb8c00;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.save-btn {
+  background-color: #4caf50;
+}
+.cancel-btn {
+  background-color: #9e9e9e;
+}
+
+.save-btn:hover {
+  background-color: #43a047;
+}
+
+.cancel-btn:hover {
+  background-color: #757575;
 }
