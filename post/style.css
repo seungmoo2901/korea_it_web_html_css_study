@@ -1,0 +1,103 @@
+body {
+  background-color: #f4f7f6;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+header > h1 {
+  color: #007bff;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.page-container {
+  display: none;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* active - 보이는 목록은 보이고 상세목록은 안보임 */
+.active {
+  display: block;
+}
+
+h2 {
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+.loading-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+.list-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 800px;
+  overflow: auto;
+}
+
+.list-container > li {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2 ease;
+}
+
+.post-title:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.detail-btn {
+  background-color: #17a2b8;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.detail-btn:hover {
+  background-color: #138496;
+}
