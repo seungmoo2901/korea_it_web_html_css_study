@@ -33,7 +33,7 @@ async function getData() {
 
     postContainer.innerHTML = `
         <h2>${postData.title}</h2>
-        <h2>${postData.body}</h2>
+        <p>${postData.body}</p>
     `;
 
     postContainer.style.borderColor = "#28a745";
