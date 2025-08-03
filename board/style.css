@@ -8,10 +8,13 @@ body {
 }
 
 header {
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: #007bff;
+  box-shadow: -1px 2px 14px -1px rgba(0, 0, 0, 0.41);
 }
 
 nav {
@@ -35,11 +38,21 @@ nav > button:hover {
   color: black;
 }
 
+nav > button > span {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+nav > button:hover > span {
+  transform: translateY(-3px);
+}
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  padding-top: 50px;
 }
 
 .page {
@@ -47,6 +60,8 @@ main {
   flex-direction: column;
   align-items: center;
   min-width: 700px;
+  padding-top: 50px;
+  box-sizing: border-box;
 }
 
 .active {
@@ -63,11 +78,17 @@ form {
   width: 400px;
 }
 
-input {
+input,
+textarea {
   padding: 10px;
   border: 1px solid #dddddd;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
 }
 
 .btn-submit {
@@ -82,4 +103,65 @@ input {
 
 .btn-submit:hover {
   background-color: #0056b3;
+}
+
+/* 게시물 목록 스타일 */
+#board-list {
+  width: 100%;
+  max-width: 700px;
+  list-style: none;
+  padding: 0;
+}
+
+#board-list > li {
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#board-list > li:hover {
+  background-color: #e0efff;
+  border: 1.5px solid #007bff;
+  transform: translateY(-1px);
+}
+
+#page-detail {
+  text-align: left;
+  max-width: 600px;
+}
+
+#page-detail > h2,
+p {
+  width: 100%;
+  padding-left: 10px;
+}
+
+#detail-userid {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dbdbdb;
+  box-sizing: border-box;
+}
+
+#detail-content {
+  min-height: 500px;
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 10px;
+}
+
+#back-btn {
+  border: none;
+  padding: 7px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+#back-btn:hover {
+  background-color: #e2e6ea;
 }
