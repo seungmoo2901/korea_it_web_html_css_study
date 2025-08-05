@@ -94,7 +94,7 @@
             <button id="back-btn">목록으로</button>
             <div id="btn-box">
               <button id="delete-btn" class="commonBtn">삭제</button>
-              <button id="edit-btn" class="commonBtn">수정</button>
+              <button id="update-btn" class="commonBtn">수정</button>
             </div>
           </div>
         </div>
@@ -114,8 +114,26 @@
             <button type="submit" class="btn-submit">작성 완료</button>
           </form>
         </div>
-      </main>
-    </div>
+        <!-- 게시판 수정하기 -->
+				<div id="page-update" class="page">
+					<h2>수정하기</h2>
+					<form id="update-form">
+						<input
+							type="text"
+							id="update-title"
+							placeholder="제목을 입력하세요"
+						/>
+						<textarea
+							id="update-content"
+							placeholder="내용을 입력하세요"
+						></textarea>
+						<button type="submit" class="btn-submit">
+							수정하기
+						</button>
+					</form>
+				</div>
+			</main>
+		</div>
     <script src="script.js"></script>
   </body>
 </html>
